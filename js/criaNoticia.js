@@ -11,7 +11,7 @@ if(adicionaNoticia == 1) {
             <div class="card-body">
                 <h5 class="card-title titulo-importante">${titulo[0].texto}</h5>
                 <p class="card-text" id="p-do-ngc-la">${subtitulo[0].texto}</p>
-                <a href="noticia-fome.html" class="btn btn-primary btn-card">Saiba mais!</a>
+                <a href="novaNoticia.html" class="btn btn-primary btn-card">Saiba mais!</a>
             </div>
         </div>
     `
