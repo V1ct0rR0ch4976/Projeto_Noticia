@@ -1,9 +1,8 @@
-const sectionComentario = document.querySelector('.secao-comentario')
-const btnComenta = document.querySelector('#btn-comenta')
-const newComentarioDiv = document.querySelector('.newComentarioDiv')
-const nomeDoUsuario = document.querySelector('.nomeNoComentario')
-const item = JSON.parse(localStorage.getItem("item")) || []
-const comentarioArea = document.querySelector('.area-comentario')
+let btnComenta = document.querySelector('#btn-comenta')
+let newComentarioDiv = document.querySelector('.newComentarioDiv')
+let nomeDoUsuario = document.querySelector('.nomeNoComentario')
+let item = JSON.parse(localStorage.getItem("item")) || []
+let comentarioArea = document.querySelector('.area-comentario')
 let comentario = document.querySelector('.comentario')
 
 btnComenta.addEventListener('click', (event) => {
@@ -17,12 +16,12 @@ btnComenta.addEventListener('click', (event) => {
         document.querySelector('.erro-comentario').classList.add('d-none')
         document.querySelector('.erro-comentario-digitar').classList.add('d-none')
         comentario = event.target.parentNode.children[1].children[0];
-        const newComentario = document.createElement('div');
+        let newComentario = document.createElement('div');
         newComentario.classList.add('novo-comentario');
         nomeDoUsuario.innerHTML = item[0].nome
         newComentario.innerHTML = `${comentario.value}`;
         newComentarioDiv.appendChild(newComentario);
-        comentario.value = ''; 
+        comentario.value = '';
     }
     
 });
