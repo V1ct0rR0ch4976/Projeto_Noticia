@@ -1,14 +1,19 @@
 export class Noticia {
-    titulo
-    subtitulo
-    texto
-    imagem
-    cor
+    _titulo
+    _subtitulo
+    _imagem
     constructor(titulo, subtitulo, imagem) {
-        this.titulo = titulo
-        this.subtitulo = subtitulo
-        this.texto = texto
-        this.imagem = imagem
-        this.cor = cor
+        this._titulo = titulo
+        this._subtitulo = subtitulo
+        this._imagem = imagem
+    }
+    get titulo() {
+        return this._titulo
+    }
+    get subtitulo() {
+        return this._subtitulo
+    }
+    get imagem() {
+        return this._imagem
     }
 }

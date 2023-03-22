@@ -9,9 +9,10 @@ let subtitulo = JSON.parse(localStorage.getItem('subtitulo')) || [];
 let noticiaNova = new Noticia(titulo, subtitulo, imgStorage)
 
 if(adicionaNoticia == 1) {
+    console.log(noticiaNova)
     sectionNoticias.innerHTML += `
         <div class="card noticia d-inline-block col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-1 col-1" >
-            <img src="${noticiaNova.imgStorage[0].url}" class="imagem-fome" alt="${noticiaNova.imgStorage[0].alt}">
+            <img src="${noticiaNova.imagem[0].url}" class="imagem-fome" alt="${noticiaNova.imagem[0].alt}">
             <div class="card-body">
                 <h5 class="card-title titulo-importante">${noticiaNova.titulo[0].texto}</h5>
                 <p class="card-text" id="p-do-ngc-la">${noticiaNova.subtitulo[0].texto}</p>
